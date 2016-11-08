@@ -1,0 +1,7 @@
+[package]
+name = "rust_comm"
+version = "0.1.0"
+authors = ["jrreed83 <joeyrreed@gmail.com>"]
+
+[dependencies]
+num = "0.1.36"
