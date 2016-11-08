@@ -1,10 +1,15 @@
-mod bpsk;
-mod qpsk;
 
-extern crate num;
-use num::Complex;
+extern crate rust_comm;
+use rust_comm::bpsk;
 
 fn main() {
-    let x: Complex<f64> = qpsk::modulator::symbol_map(0);
-    println!("{0}",x);
+    let v:Vec<u8> = vec![0,1,0,1,0];
+
+    let x = bpsk::modulator::map_symbols(&v);
+
+    for xi in &x {
+        println!("{}", xi);
+    }
+
+    println!("{}", 3.14159_f32.sin());    
 }

@@ -1,4 +1,3 @@
-extern crate num;
 use num::Complex;
 
 pub fn symbol_map(symbol:u8) -> Complex<f64> {
@@ -7,7 +6,7 @@ pub fn symbol_map(symbol:u8) -> Complex<f64> {
         1 => Complex::new(-1.0, 1.0),
         2 => Complex::new( 1.0,-1.0),
         3 => Complex::new( 1.0, 1.0),
-        _ => Complex::new( 1.0, 1.0)
+        _ => Complex::new( 0.0, 0.0)
     };
     y
 }
