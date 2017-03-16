@@ -2,6 +2,7 @@
 extern crate rust_comm;
 use rust_comm::bpsk;
 
+use std::num::Zero;
 
 fn main() {
     let v:Vec<u8> = vec![0,1,0,1,0];
@@ -12,7 +13,10 @@ fn main() {
 
 
     for i in 1..50 {
-        println!("{}",upconverter.step());
+        println!("{}",upconverter.step(1.0));
     }
-  
+    
+    let x:i8 = Zero::zero();
+
+    println!("{}",x);
 }
